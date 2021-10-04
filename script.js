@@ -32,14 +32,17 @@ function computerChoice() {
             document.getElementById(`sq${e[2]}`).innerHTML = "O"
             oPositionList.push(`sq${e[2]}`)
             done = true
+            return
         } else if (xPositionList.includes(`sq${e[0]}`) && xPositionList.includes(`sq${e[2]}`) && (xPositionList.includes(`sq${e[1]}`) === false)){
             document.getElementById(`sq${e[1]}`).innerHTML = "O"
             oPositionList.push(`sq${e[1]}`)
             done = true
+            return
         } else if (xPositionList.includes(`sq${e[1]}`) && xPositionList.includes(`sq${e[2]}`) && (xPositionList.includes(`sq${e[0]}`) === false)){
             document.getElementById(`sq${e[0]}`).innerHTML = "O"
             oPositionList.push(`sq${e[0]}`)
             done = true
+            return
         }
     })
     if (document.getElementById(`sq${num}`).innerHTML === "-" && !done) {
